@@ -4,15 +4,15 @@ using namespace std;
 int main(){
 int array [] = {3, 5, 2, 1, 6, 4};
 int size = sizeof(array)/sizeof(*array);
-    for(int x = 0;x < size;x++){
-       cout<<array[x]<<" ";
-    }
-    cout<<endl;
-    int awal;
-   for(int x = 0;x < size/2;x++){
-      awal = array[x];
-      array[size - 1] = array[x];
-      array[x] = awal;
-      cout<<awal<<" ";
+   int swap;
+   for (int i = 0; i < size / 2; i++){
+      swap = array[i];
+      array[i] = array[size - i - 1];
+      array[size - i - 1] = swap;
    }
+   for (int i = 0; i < size; i++){
+      /* code */
+      cout<<array[i]<<" ";
+   }
+   
 }
